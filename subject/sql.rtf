@@ -1,0 +1,351 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww22120\viewh23720\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\
+# Useful links\
+\
+## branches on gitlub\
+https://gitlab.com/azatyakupov/sql-beta\
+https://gitlab.com/azatyakupov/sql-beta/-/branches\
+\
+\
+### SQL Day 00\
+https://docs.google.com/document/d/1eP6kMsjo3kHTMNepZOEnHU4Ulgfo77JfN_jWut2KQ3Y/edit\
+\
+### Checklist\
+https://docs.google.com/document/d/1ljpwB8uV3_dExqCFpistSPLLgtfWn3JQnH2ZP-AKdGo/edit\
+\
+### Slack team\
+https://app.slack.com/client/T0156SD7389/G019CHHJG5Q/thread/G019CHHJG5Q-1598347180.017700\
+\
+### List of countries\
+https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population\
+\
+\
+\
+\
+\
+### MACOS install tips:\
+\
+============================\
+```\
+mi-i1% flyway\
+Usage\
+=====\
+\
+flyway [options] command\
+\
+By default, the configuration will be read from conf/flyway.conf.\
+Options passed from the command-line override the configuration.\
+\
+Commands\
+--------\
+migrate  : Migrates the database\
+clean    : Drops all objects in the configured schemas\
+info     : Prints the information about applied, current and pending migrations\
+validate : Validates the applied migrations against the ones on the classpath\
+undo     : [pro] Undoes the most recently applied versioned migration\
+baseline : Baselines an existing database at the baselineVersion\
+repair   : Repairs the schema history table\
+\
+Options (Format: -key=value)\
+-------\
+driver                       : Fully qualified classname of the JDBC driver\
+url                          : Jdbc url to use to connect to the database\
+user                         : User to use to connect to the database\
+password                     : Password to use to connect to the database\
+connectRetries               : Maximum number of retries when attempting to connect to the database\
+initSql                      : SQL statements to run to initialize a new database connection\
+schemas                      : Comma-separated list of the schemas managed by Flyway\
+table                        : Name of Flyway's schema history table\
+locations                    : Classpath locations to scan recursively for migrations\
+resolvers                    : Comma-separated list of custom MigrationResolvers\
+skipDefaultResolvers         : Skips default resolvers (jdbc, sql and Spring-jdbc)\
+sqlMigrationPrefix           : File name prefix for versioned SQL migrations\
+undoSqlMigrationPrefix       : [pro] File name prefix for undo SQL migrations\
+repeatableSqlMigrationPrefix : File name prefix for repeatable SQL migrations\
+sqlMigrationSeparator        : File name separator for SQL migrations\
+sqlMigrationSuffixes         : Comma-separated list of file name suffixes for SQL migrations\
+stream                       : [pro] Stream SQL migrations when executing them\
+batch                        : [pro] Batch SQL statements when executing them\
+mixed                        : Allow mixing transactional and non-transactional statements\
+encoding                     : Encoding of SQL migrations\
+placeholderReplacement       : Whether placeholders should be replaced\
+placeholders                 : Placeholders to replace in sql migrations\
+placeholderPrefix            : Prefix of every placeholder\
+placeholderSuffix            : Suffix of every placeholder\
+installedBy                  : Username that will be recorded in the schema history table\
+target                       : Target version up to which Flyway should use migrations\
+outOfOrder                   : Allows migrations to be run "out of order"\
+callbacks                    : Comma-separated list of FlywayCallback classes\
+skipDefaultCallbacks         : Skips default callbacks (sql)\
+validateOnMigrate            : Validate when running migrate\
+validateMigrationNaming      : Validate file names of SQL migrations (including callbacks)\
+ignoreMissingMigrations      : Allow missing migrations when validating\
+ignoreIgnoredMigrations      : Allow ignored migrations when validating\
+ignorePendingMigrations      : Allow pending migrations when validating\
+ignoreFutureMigrations       : Allow future migrations when validating\
+cleanOnValidationError       : Automatically clean on a validation error\
+cleanDisabled                : Whether to disable clean\
+baselineVersion              : Version to tag schema with when executing baseline\
+baselineDescription          : Description to tag schema with when executing baseline\
+baselineOnMigrate            : Baseline on migrate against uninitialized non-empty schema\
+configFiles                  : Comma-separated list of config files to use\
+configFileEncoding           : Encoding to use when loading the config files\
+jarDirs                      : Comma-separated list of dirs for Jdbc drivers & Java migrations\
+createSchemas          : Whether Flyway should attempt to create the schemas specified in the schemas property\
+dryRunOutput                 : [pro] File where to output the SQL statements of a migration dry run\
+errorOverrides               : [pro] Rules to override specific SQL states and errors codes\
+oracle.sqlplus               : [pro] Enable Oracle SQL*Plus command support\
+licenseKey                   : [pro] Your Flyway license key\
+color                        : Whether to colorize output. Values: always, never, or auto (default)\
+outputFile                   : Send output to the specified file alongside the console\
+\
+Flags\
+-----\
+-X          : Print debug output\
+-q          : Suppress all output, except for errors and warnings\
+-n          : Suppress prompting for a user and password\
+-v          : Print the Flyway version and exit\
+-?          : Print this usage info and exit\
+-json       : Print the output in JSON format\
+-community  : Run the Flyway Community Edition (default)\
+-pro        : Run the Flyway Pro Edition\
+-enterprise : Run the Flyway Enterprise Edition\
+\
+Example\
+-------\
+flyway -user=myuser -password=s3cr3t -url=jdbc:h2:mem -placeholders.abc=def migrate\
+\
+More info at https://flywaydb.org/documentation/commandline\
+```\
+============================\
+\
+\
+\
+***\
+\
+```\
+mi-i1% brew install postgres\
+Updating Homebrew...\
+==> Auto-updated Homebrew!\
+Updated 1 tap (homebrew/core).\
+==> New Formulae\
+cdktf                           localstack                      parallel-hashmap                protoc-gen-gogofaster\
+cli11                           mhonarc                         podman                          sleef\
+inja                            numcpp                          protoc-gen-gogo                 volk\
+==> Updated Formulae\
+Updated 2339 formulae.\
+\
+Warning: Building pkg-config from source:\
+  The bottle only works in the default /usr/local location.\
+==> Downloading https://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz\
+######################################################################## 100.0%\
+==> Downloading https://homebrew.bintray.com/bottles/icu4c-67.1.mojave.bottle.tar.gz\
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/b6069459c78f18045ee922ce5cb5b235d4b479597d79c3c298d09e0de3d70794?response-content-disposition=attachment%3Bfilename%3D%22icu4c-67.1.mojave.bot\
+######################################################################## 100.0%\
+==> Downloading https://www.openssl.org/source/openssl-1.1.1g.tar.gz\
+######################################################################## 100.0%\
+==> Downloading https://kerberos.org/dist/krb5/1.18/krb5-1.18.2.tar.gz\
+######################################################################## 100.0%\
+==> Downloading https://homebrew.bintray.com/bottles/readline-8.0.4.mojave.bottle.tar.gz\
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/29f7102a730ab39c8312cad1e7e439f6da2a67c452ce2b3380581eb185a5d8e8?response-content-disposition=attachment%3Bfilename%3D%22readline-8.0.4.mojave\
+######################################################################## 100.0%\
+==> Downloading https://ftp.postgresql.org/pub/source/v12.4/postgresql-12.4.tar.bz2\
+######################################################################## 100.0%\
+==> Installing dependencies for postgresql: pkg-config, icu4c, openssl@1.1, krb5 and readline\
+==> Installing postgresql dependency: pkg-config\
+==> ./configure --prefix=/Users/apearl/.brew/Cellar/pkg-config/0.29.2_3 --disable-host-tool --with-internal-glib --with-pc-path=/Users/apearl/.brew/lib/pkgconfig:/Users/apearl/.brew/share/pkgconfig:/us\
+==> make\
+==> make install\
+\'f0\'9f\uc0\u141 \'ba  /Users/apearl/.brew/Cellar/pkg-config/0.29.2_3: 11 files, 624.1KB, built in 1 minute 15 seconds\
+==> Installing postgresql dependency: icu4c\
+==> Pouring icu4c-67.1.mojave.bottle.tar.gz\
+==> Caveats\
+icu4c is keg-only, which means it was not symlinked into /Users/apearl/.brew,\
+because macOS provides libicucore.dylib (but nothing else).\
+\
+If you need to have icu4c first in your PATH run:\
+  echo 'export PATH="/Users/apearl/.brew/opt/icu4c/bin:$PATH"' >> ~/.zshrc\
+  echo 'export PATH="/Users/apearl/.brew/opt/icu4c/sbin:$PATH"' >> ~/.zshrc\
+\
+For compilers to find icu4c you may need to set:\
+  export LDFLAGS="-L/Users/apearl/.brew/opt/icu4c/lib"\
+  export CPPFLAGS="-I/Users/apearl/.brew/opt/icu4c/include"\
+\
+For pkg-config to find icu4c you may need to set:\
+  export PKG_CONFIG_PATH="/Users/apearl/.brew/opt/icu4c/lib/pkgconfig"\
+\
+==> Summary\
+\'f0\'9f\uc0\u141 \'ba  /Users/apearl/.brew/Cellar/icu4c/67.1: 258 files, 71MB\
+==> Installing postgresql dependency: openssl@1.1\
+==> perl ./Configure --prefix=/Users/apearl/.brew/Cellar/openssl@1.1/1.1.1g --openssldir=/Users/apearl/.brew/etc/openssl@1.1 no-ssl3 no-ssl3-method no-zlib darwin64-x86_64-cc enable-ec_nistp_64_gcc_128\
+==> make\
+==> make test\
+==> make install MANDIR=/Users/apearl/.brew/Cellar/openssl@1.1/1.1.1g/share/man MANSUFFIX=ssl\
+==> Caveats\
+A CA file has been bootstrapped using certificates from the system\
+keychain. To add additional certificates, place .pem files in\
+  /Users/apearl/.brew/etc/openssl@1.1/certs\
+\
+and run\
+  /Users/apearl/.brew/opt/openssl@1.1/bin/c_rehash\
+\
+openssl@1.1 is keg-only, which means it was not symlinked into /Users/apearl/.brew,\
+because macOS provides LibreSSL.\
+\
+If you need to have openssl@1.1 first in your PATH run:\
+  echo 'export PATH="/Users/apearl/.brew/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc\
+\
+For compilers to find openssl@1.1 you may need to set:\
+  export LDFLAGS="-L/Users/apearl/.brew/opt/openssl@1.1/lib"\
+  export CPPFLAGS="-I/Users/apearl/.brew/opt/openssl@1.1/include"\
+\
+For pkg-config to find openssl@1.1 you may need to set:\
+  export PKG_CONFIG_PATH="/Users/apearl/.brew/opt/openssl@1.1/lib/pkgconfig"\
+\
+==> Summary\
+\'f0\'9f\uc0\u141 \'ba  /Users/apearl/.brew/Cellar/openssl@1.1/1.1.1g: 8,052 files, 18MB, built in 6 minutes 16 seconds\
+==> Installing postgresql dependency: krb5\
+==> ./configure --prefix=/Users/apearl/.brew/Cellar/krb5/1.18.2 --without-system-verto\
+==> make\
+==> make install\
+==> Caveats\
+krb5 is keg-only, which means it was not symlinked into /Users/apearl/.brew,\
+because macOS already provides this software and installing another version in\
+parallel can cause all kinds of trouble.\
+\
+If you need to have krb5 first in your PATH run:\
+  echo 'export PATH="/Users/apearl/.brew/opt/krb5/bin:$PATH"' >> ~/.zshrc\
+  echo 'export PATH="/Users/apearl/.brew/opt/krb5/sbin:$PATH"' >> ~/.zshrc\
+\
+For compilers to find krb5 you may need to set:\
+  export LDFLAGS="-L/Users/apearl/.brew/opt/krb5/lib"\
+  export CPPFLAGS="-I/Users/apearl/.brew/opt/krb5/include"\
+\
+For pkg-config to find krb5 you may need to set:\
+  export PKG_CONFIG_PATH="/Users/apearl/.brew/opt/krb5/lib/pkgconfig"\
+\
+==> Summary\
+\'f0\'9f\uc0\u141 \'ba  /Users/apearl/.brew/Cellar/krb5/1.18.2: 162 files, 3.8MB, built in 1 minute 38 seconds\
+==> Installing postgresql dependency: readline\
+==> Pouring readline-8.0.4.mojave.bottle.tar.gz\
+==> Caveats\
+readline is keg-only, which means it was not symlinked into /Users/apearl/.brew,\
+because macOS provides BSD libedit.\
+\
+For compilers to find readline you may need to set:\
+  export LDFLAGS="-L/Users/apearl/.brew/opt/readline/lib"\
+  export CPPFLAGS="-I/Users/apearl/.brew/opt/readline/include"\
+\
+For pkg-config to find readline you may need to set:\
+  export PKG_CONFIG_PATH="/Users/apearl/.brew/opt/readline/lib/pkgconfig"\
+\
+==> Summary\
+\'f0\'9f\uc0\u141 \'ba  /Users/apearl/.brew/Cellar/readline/8.0.4: 48 files, 1.5MB\
+==> Installing postgresql\
+==> ./configure --prefix=/Users/apearl/.brew/Cellar/postgresql/12.4 --datadir=/Users/apearl/.brew/share/postgresql --libdir=/Users/apearl/.brew/lib --includedir=/Users/apearl/.brew/include --sysconfdir\
+==> make\
+==> make install-world datadir=/Users/apearl/.brew/Cellar/postgresql/12.4/share/postgresql libdir=/Users/apearl/.brew/Cellar/postgresql/12.4/lib pkglibdir=/Users/apearl/.brew/Cellar/postgresql/12.4/lib\
+==> /Users/apearl/.brew/Cellar/postgresql/12.4/bin/initdb --locale=C -E UTF-8 /Users/apearl/.brew/var/postgres\
+==> Caveats\
+To migrate existing data from a previous major version of PostgreSQL run:\
+  brew postgresql-upgrade-database\
+\
+This formula has created a default database cluster with:\
+  initdb --locale=C -E UTF-8 /Users/apearl/.brew/var/postgres\
+For more details, read:\
+  https://www.postgresql.org/docs/12/app-initdb.html\
+\
+To have launchd start postgresql now and restart at login:\
+  brew services start postgresql\
+Or, if you don't want/need a background service you can just run:\
+  pg_ctl -D /Users/apearl/.brew/var/postgres start\
+==> Summary\
+\'f0\'9f\uc0\u141 \'ba  /Users/apearl/.brew/Cellar/postgresql/12.4: 3,223 files, 37.2MB, built in 2 minutes 23 seconds\
+==> Caveats\
+==> icu4c\
+icu4c is keg-only, which means it was not symlinked into /Users/apearl/.brew,\
+because macOS provides libicucore.dylib (but nothing else).\
+\
+If you need to have icu4c first in your PATH run:\
+  echo 'export PATH="/Users/apearl/.brew/opt/icu4c/bin:$PATH"' >> ~/.zshrc\
+  echo 'export PATH="/Users/apearl/.brew/opt/icu4c/sbin:$PATH"' >> ~/.zshrc\
+\
+For compilers to find icu4c you may need to set:\
+  export LDFLAGS="-L/Users/apearl/.brew/opt/icu4c/lib"\
+  export CPPFLAGS="-I/Users/apearl/.brew/opt/icu4c/include"\
+\
+For pkg-config to find icu4c you may need to set:\
+  export PKG_CONFIG_PATH="/Users/apearl/.brew/opt/icu4c/lib/pkgconfig"\
+\
+==> openssl@1.1\
+A CA file has been bootstrapped using certificates from the system\
+keychain. To add additional certificates, place .pem files in\
+  /Users/apearl/.brew/etc/openssl@1.1/certs\
+\
+and run\
+  /Users/apearl/.brew/opt/openssl@1.1/bin/c_rehash\
+\
+openssl@1.1 is keg-only, which means it was not symlinked into /Users/apearl/.brew,\
+because macOS provides LibreSSL.\
+\
+If you need to have openssl@1.1 first in your PATH run:\
+  echo 'export PATH="/Users/apearl/.brew/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc\
+\
+For compilers to find openssl@1.1 you may need to set:\
+  export LDFLAGS="-L/Users/apearl/.brew/opt/openssl@1.1/lib"\
+  export CPPFLAGS="-I/Users/apearl/.brew/opt/openssl@1.1/include"\
+\
+For pkg-config to find openssl@1.1 you may need to set:\
+  export PKG_CONFIG_PATH="/Users/apearl/.brew/opt/openssl@1.1/lib/pkgconfig"\
+\
+==> krb5\
+krb5 is keg-only, which means it was not symlinked into /Users/apearl/.brew,\
+because macOS already provides this software and installing another version in\
+parallel can cause all kinds of trouble.\
+\
+If you need to have krb5 first in your PATH run:\
+  echo 'export PATH="/Users/apearl/.brew/opt/krb5/bin:$PATH"' >> ~/.zshrc\
+  echo 'export PATH="/Users/apearl/.brew/opt/krb5/sbin:$PATH"' >> ~/.zshrc\
+\
+For compilers to find krb5 you may need to set:\
+  export LDFLAGS="-L/Users/apearl/.brew/opt/krb5/lib"\
+  export CPPFLAGS="-I/Users/apearl/.brew/opt/krb5/include"\
+\
+For pkg-config to find krb5 you may need to set:\
+  export PKG_CONFIG_PATH="/Users/apearl/.brew/opt/krb5/lib/pkgconfig"\
+\
+==> readline\
+readline is keg-only, which means it was not symlinked into /Users/apearl/.brew,\
+because macOS provides BSD libedit.\
+\
+For compilers to find readline you may need to set:\
+  export LDFLAGS="-L/Users/apearl/.brew/opt/readline/lib"\
+  export CPPFLAGS="-I/Users/apearl/.brew/opt/readline/include"\
+\
+For pkg-config to find readline you may need to set:\
+  export PKG_CONFIG_PATH="/Users/apearl/.brew/opt/readline/lib/pkgconfig"\
+\
+==> postgresql\
+To migrate existing data from a previous major version of PostgreSQL run:\
+  brew postgresql-upgrade-database\
+\
+This formula has created a default database cluster with:\
+  initdb --locale=C -E UTF-8 /Users/apearl/.brew/var/postgres\
+For more details, read:\
+  https://www.postgresql.org/docs/12/app-initdb.html\
+\
+To have launchd start postgresql now and restart at login:\
+  brew services start postgresql\
+Or, if you don't want/need a background service you can just run:\
+  pg_ctl -D /Users/apearl/.brew/var/postgres start\
+```\
+============================\
+}
